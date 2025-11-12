@@ -4,6 +4,8 @@ import Home from "../Pages/Home";
 import Navbar from "../Components/Navbar/Navbar";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
+import Upevents from "../Pages/Upevents";
+import Footer from "../Components/Footer/Footer";
 
 const Paths = () => {
   return (
@@ -14,7 +16,9 @@ const Paths = () => {
           <Home></Home>
           <Login></Login>
           <Register></Register>
+          <Upevents></Upevents>
         </Outlet>
+        <Footer></Footer>
       </div>
     </>
   );
