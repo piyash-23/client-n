@@ -1,0 +1,55 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  font-family: "Poppins";
+}
+
+.login {
+  border: none;
+  background: #2f4057;
+  color: white;
+}
+
+.login:hover {
+  background: #5bc0de;
+  color: #2f4057;
+}
+
+.lefty {
+  background: #eff2f7;
+  padding: 20px;
+  border-radius: 1rem;
+}
+
+.learn {
+  color: #2f4057;
+  border-bottom: 1px solid #2f4057;
+  padding-bottom: 3px;
+  line-height: 1.4;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.learn:hover {
+  border-bottom: 1px solid #00eba0;
+  transform: scale(1.1);
+}
+
+.abs_btn {
+  background: #2f4057;
+  color: #eff2f7;
+  cursor: pointer;
+  transition: all 0.2s;
+  padding: 8px 15px;
+}
+.abs_btn:hover {
+  background: #00eba0;
+  color: #2f4057;
+}
+
+.righty {
+  background-image: linear-gradient(#2f40579c, #00eba134),
+    url(./assets/cleaning.jpg);
+  background-size: cover;
+  border-radius: 10px;
+}
