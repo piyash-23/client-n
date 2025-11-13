@@ -22,13 +22,13 @@ const router = createBrowserRouter([
       },
       {
         path: "upcoming",
-        loader: () => fetch("http://localhost:3000/events"),
+        loader: () => fetch("https://social-server-steel.vercel.app/events"),
         Component: Upevents,
       },
       {
         path: "upcoming/:id",
         loader: ({ params }) =>
-          fetch(`http://localhost:3000/events/${params.id}`),
+          fetch(`https://social-server-steel.vercel.app/events/${params.id}`),
         element: (
           <PrivateRoute>
             <Details></Details>

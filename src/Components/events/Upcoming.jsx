@@ -5,7 +5,7 @@ import { Link } from "react-router";
 const Upcoming = () => {
   const [event, setEvent] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:3000/events")
+    fetch("https://social-server-steel.vercel.app/events")
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);

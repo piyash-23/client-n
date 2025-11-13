@@ -61,11 +61,14 @@ const CreateEvent = () => {
       console.log("Facing a problem while submitting");
     }
     try {
-      const response = await fetch("http://localhost:3000/events", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
+      const response = await fetch(
+        "https://social-server-steel.vercel.app/events",
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(formData),
+        }
+      );
       if (response.ok) {
         const result = await response.json();
         console.log("Server Response:", result);
