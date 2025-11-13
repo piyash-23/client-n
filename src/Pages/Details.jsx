@@ -1,9 +1,17 @@
-import React from "react";
+import React, { use, useState } from "react";
 import { Link, useLoaderData } from "react-router";
+import { Authcontext } from "../Context/Authprovider";
 
 const Details = () => {
   const data = useLoaderData();
+  const { joined, setJoined } = use(Authcontext);
   const { title, description, date, location, capacity } = data;
+  const [isJoined, setIsJoined] = useState(false);
+  const onJoin = () => {
+    setJoined([...joined, data]);
+    setIsJoined(true);
+    console.log(joined);
+  };
   console.log(data);
   return (
     <>
@@ -17,10 +25,9 @@ const Details = () => {
             <p>Will held on {date}</p>
             <p>{location}</p>
             <p>Around {capacity} people can join!</p>
-            <img src="" alt="" />
           </div>
           <div>
-            <button>
+            <button disabled={isJoined} onClick={onJoin}>
               <Link className="btn login">Join now</Link>
             </button>
           </div>

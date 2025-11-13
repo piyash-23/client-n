@@ -8,6 +8,7 @@ import Upevents from "../Pages/Upevents";
 import Details from "../Pages/Details";
 import PrivateRoute from "./Private/PrivateRoute";
 import CreateEvent from "../Pages/CreateEvent";
+import Manage from "../Pages/Manage";
 
 const router = createBrowserRouter([
   {
@@ -49,6 +50,14 @@ const router = createBrowserRouter([
       {
         path: "register",
         Component: Register,
+      },
+      {
+        path: "manage-events",
+        element: (
+          <PrivateRoute>
+            <Manage></Manage>
+          </PrivateRoute>
+        ),
       },
     ],
   },

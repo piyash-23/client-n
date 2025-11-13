@@ -22,15 +22,13 @@ const Navbar = () => {
       <li>
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li>
-        <NavLink>About</NavLink>
-      </li>
+      <li>{/* <NavLink>About</NavLink> */}</li>
       <li>
         <NavLink to={"/upcoming"}>Upcoming Events</NavLink>
       </li>
     </>
   );
-  console.log(user);
+  // console.log(user);
   return (
     <>
       <div className="navbar">

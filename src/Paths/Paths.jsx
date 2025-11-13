@@ -6,6 +6,7 @@ import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Upevents from "../Pages/Upevents";
 import Footer from "../Components/Footer/Footer";
+import Manage from "../Pages/Manage";
 
 const Paths = () => {
   return (
@@ -17,6 +18,7 @@ const Paths = () => {
           <Login></Login>
           <Register></Register>
           <Upevents></Upevents>
+          <Manage></Manage>
         </Outlet>
         <Footer></Footer>
       </div>

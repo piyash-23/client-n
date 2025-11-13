@@ -14,6 +14,7 @@ const provider = new GoogleAuthProvider();
 const Authprovider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [joined, setJoined] = useState([]);
 
   useEffect(() => {
     const unsubscribed = onAuthStateChanged(auth, (currentUser) => {
@@ -50,6 +51,8 @@ const Authprovider = ({ children }) => {
     googleUser,
     singEmailPass,
     out,
+    joined,
+    setJoined,
   };
   return <Authcontext value={authInfo}>{children}</Authcontext>;
 };

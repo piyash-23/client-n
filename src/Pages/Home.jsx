@@ -2,6 +2,7 @@ import React from "react";
 import Heade from "../Components/header/Heade";
 import Upcoming from "../Components/events/Upcoming";
 import Feature from "../Components/feature/Feature";
+import ImageGallery from "../Components/gallery/Gallery";
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
       <Heade></Heade>
       <Upcoming></Upcoming>
       <Feature></Feature>
+      <ImageGallery></ImageGallery>
     </>
   );
 };
