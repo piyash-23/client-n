@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Events from "./Events";
+import { Link } from "react-router";
 
 const Upcoming = () => {
   const [event, setEvent] = useState([]);
@@ -8,7 +9,7 @@ const Upcoming = () => {
       .then((res) => res.json())
       .then((data) => setEvent(data));
   }, []);
-  const show = event.slice(0, 4);
+  const show = event.slice(0, 6);
   return (
     <>
       <div className="max-w-[100%] mx-auto">
@@ -22,6 +23,13 @@ const Upcoming = () => {
           {show.map((eve) => (
             <Events key={eve._id} eve={eve}></Events>
           ))}
+        </div>
+        <div>
+          <button className="w-full text-center">
+            <Link to={"/upcoming"} className="btn login">
+              Show all upcoming events
+            </Link>
+          </button>
         </div>
       </div>
     </>

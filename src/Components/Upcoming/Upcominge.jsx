@@ -1,7 +1,8 @@
 import React from "react";
 import { SlCalender } from "react-icons/sl";
+import { Link } from "react-router";
 const Upcominge = ({ even }) => {
-  const { title, description, date, location } = even;
+  const { title, description, date, location, _id } = even;
   return (
     <>
       <div>
@@ -29,7 +30,7 @@ const Upcominge = ({ even }) => {
               onClick={() => console.log("CTA Clicked")}
               aria-label="Be Part of It"
             >
-              Be Part of It
+              <Link to={`/upcoming/${_id}`}>Be Part of It</Link>
               <span className="absolute left-0 bottom-0.5 w-full h-0.5 bg-emerald-300 transition-all duration-300 group-hover:h-1 group-hover:bg-emerald-400"></span>
             </button>
           </div>

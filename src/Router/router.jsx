@@ -5,6 +5,9 @@ import Home from "../Pages/Home";
 import Login from "../Pages/Login";
 import Register from "../Pages/Register";
 import Upevents from "../Pages/Upevents";
+import Details from "../Pages/Details";
+import PrivateRoute from "./Private/PrivateRoute";
+import CreateEvent from "../Pages/CreateEvent";
 
 const router = createBrowserRouter([
   {
@@ -20,6 +23,24 @@ const router = createBrowserRouter([
         path: "upcoming",
         loader: () => fetch("http://localhost:3000/events"),
         Component: Upevents,
+      },
+      {
+        path: "upcoming/:id",
+        loader: ({ params }) =>
+          fetch(`http://localhost:3000/events/${params.id}`),
+        element: (
+          <PrivateRoute>
+            <Details></Details>
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "new-event",
+        element: (
+          <PrivateRoute>
+            <CreateEvent></CreateEvent>
+          </PrivateRoute>
+        ),
       },
       {
         path: "login",
