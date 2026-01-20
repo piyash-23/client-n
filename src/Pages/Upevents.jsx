@@ -1,9 +1,14 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useLoaderData } from "react-router";
 import Upcominge from "../Components/Upcoming/Upcominge";
 
 const Upevents = () => {
-  const events = useLoaderData();
+  const [events, setEvent] = useState([]);
+  useEffect(() => {
+    fetch("https://social-server-steel.vercel.app/events")
+      .then((res) => res.json())
+      .then((data) => setEvent(data));
+  }, []);
   return (
     <>
       <div>

@@ -56,3 +56,12 @@
 .active {
   color: #00eba0;
 }
+
+.container .card:hover {
+  transform: scale(1.2, 1.1);
+}
+
+.container:hover > :not(:hover) {
+  transform: scale(0.8);
+  filter: blur(10px);
+}
